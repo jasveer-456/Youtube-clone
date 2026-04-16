@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watch Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>YouTube Clone</h2>
+
+<video id="player" controls></video>
+<h3 id="title"></h3>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const video = params.get('video');
+const title = params.get('title');
+
+document.getElementById("player").src = video;
+document.getElementById("title").innerText = title;
+</script>
+
+</body>
+</html>
